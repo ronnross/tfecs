@@ -1,12 +1,13 @@
-TFECS
+# TFECS
 
+## Browser support
 todo
 - ~~static layout~~
 - ~~format and lint~~
 - ~~express~~
-- serve static json
-- webpack
-- react
+- ~~serve static json~~
+- ~~webpack~~
+- ~~react~~
 - jest
 - static to components
 - data in components
@@ -16,10 +17,10 @@ todo
 - redux
 - deploy
 
-# setup
+## setup
 `yarn`
 
-# run
+## run
 `npm start`
 
-# develop
+## develop
