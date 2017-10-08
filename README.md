@@ -2,10 +2,11 @@ TFECS
 
 todo
 - ~~static layout~~
-- format and lint
+- ~~format and lint~~
 - express
 - webpack
-- react-
+- react
+- jest
 - static to components
 - data in components
 - polish layout

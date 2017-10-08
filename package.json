@@ -1,0 +1,34 @@
+{
+  "name": "tfecs",
+  "version": "1.0.0",
+  "description": "TFECS",
+  "main": "index.js",
+  "scripts": {
+    "lint": "semistandard --verbose | snazzy || exit 0",
+    "lint:fix": "semistandard --fix",
+    "format": "prettier \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronnross/tfecs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronnross/tfecs/issues"
+  },
+  "homepage": "https://github.com/ronnross/tfecs#readme",
+  "devDependencies": {
+    "prettier": "^1.7.4",
+    "semistandard": "^11.0.0",
+    "snazzy": "^7.0.0"
+  },
+  "semistandard": {
+    "ignore": ["/node_modules/", "/dist/", "yarn.lock", "mock-data.js"]
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}
