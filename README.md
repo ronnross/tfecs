@@ -21,6 +21,14 @@ todo
 `yarn`
 
 ## run
-`npm start`
+`yarn start`
+
 
 ## develop
+
+*`:watch`* modifier
+### test
+`yarn test`
+
+### build
+`yarn build`
