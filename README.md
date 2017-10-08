@@ -3,7 +3,8 @@ TFECS
 todo
 - ~~static layout~~
 - ~~format and lint~~
-- express
+- ~~express~~
+- serve static json
 - webpack
 - react
 - jest
@@ -11,4 +12,14 @@ todo
 - data in components
 - polish layout
 - interactive
+- restructure project
 - redux
+- deploy
+
+# setup
+`yarn`
+
+# run
+`npm start`
+
+# develop
