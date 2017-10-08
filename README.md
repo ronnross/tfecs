@@ -8,10 +8,10 @@ todo
 - ~~serve static json~~
 - ~~webpack~~
 - ~~react~~
-- jest
+- ~~jest~~
 - static to components
 - data in components
-- polish layout
+- publish layout
 - interactive
 - restructure project
 - redux

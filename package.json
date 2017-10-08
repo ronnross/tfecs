@@ -10,7 +10,8 @@
     "lint": "semistandard --verbose | snazzy || exit 0",
     "lint:fix": "semistandard --fix",
     "format": "prettier \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage",
+    "test:watch": "jest --watch --coverage"
   },
   "repository": {
     "type": "git",
@@ -35,16 +36,25 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.7",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
+    "jest": "^21.2.1",
     "postcss-cssnext": "^3.0.2",
     "postcss-loader": "^2.0.6",
     "prettier": "^1.7.4",
+    "react-test-renderer": "^16.0.0",
     "semistandard": "^11.0.0",
     "snazzy": "^7.0.0",
     "style-loader": "^0.19.0",
     "webpack": "^3.6.0"
   },
   "semistandard": {
-    "ignore": ["/node_modules/", "/dist/", "yarn.lock", "mock-data.js"]
+    "ignore": [
+      "/node_modules/",
+      "/dist/",
+      "yarn.lock",
+      "mock-data.js"
+    ]
   },
   "prettier": {
     "singleQuote": true
