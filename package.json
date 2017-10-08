@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/ronnross/tfecs#readme",
   "dependencies": {
+    "axios": "^0.16.2",
     "ejs": "^2.5.7",
     "express": "^4.16.1",
     "react": "^16.0.0",
