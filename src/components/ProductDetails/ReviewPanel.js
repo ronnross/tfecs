@@ -1,5 +1,5 @@
 import React from 'react';
-import Ratings from './Ratings';
+import Ratings from '../DesignSystem/Ratings';
 
 const Reviews = ({ data, reviews }) => {
   console.log('reviews', reviews);
@@ -22,7 +22,7 @@ const Reviews = ({ data, reviews }) => {
       </div>
       <table>
         <thead>
-          <tr style={{ borderBottom: 'solid 1px red' }}>
+          <tr style={{ borderBottom: 'solid 1px secondary-color' }}>
             <th>
               PRO <br />most helpful 4-5 star reviews
             </th>

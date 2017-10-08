@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 
-import ProductDetails from './components/ProductDetails';
+import ProductDetails from './components/ProductDetails/';
 
 class App extends Component {
   constructor(props) {

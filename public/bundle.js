@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 23);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -260,7 +260,7 @@ process.umask = function() { return 0; };
 "use strict";
 
 
-var bind = __webpack_require__(18);
+var bind = __webpack_require__(17);
 var isBuffer = __webpack_require__(42);
 
 /*global toString:true*/
@@ -571,9 +571,9 @@ module.exports = {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(24);
+  module.exports = __webpack_require__(23);
 } else {
-  module.exports = __webpack_require__(25);
+  module.exports = __webpack_require__(24);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -1019,10 +1019,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(19);
+    adapter = __webpack_require__(18);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(19);
+    adapter = __webpack_require__(18);
   }
   return adapter;
 }
@@ -1097,52 +1097,6 @@ module.exports = defaults;
 
 /***/ }),
 /* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-function checkDCE() {
-  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
-  if (
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
-  ) {
-    return;
-  }
-  if (process.env.NODE_ENV !== 'production') {
-    // This branch is unreachable because this function is only called
-    // in production, but the condition is true only in development.
-    // Therefore if the branch is still here, dead code elimination wasn't
-    // properly applied.
-    // Don't change the message. React DevTools relies on it. Also make sure
-    // this message doesn't occur elsewhere in this function, or it will cause
-    // a false positive.
-    throw new Error('^_^');
-  }
-  try {
-    // Verify that the code above has been dead code eliminated (DCE'd).
-    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
-  } catch (err) {
-    // DevTools shouldn't crash React, no matter what.
-    // We should still report in case we break this code.
-    console.error(err);
-  }
-}
-
-if (process.env.NODE_ENV === 'production') {
-  // DCE check should happen before ReactDOM bundle executes so that
-  // DevTools can report bad minification during injection.
-  checkDCE();
-  module.exports = __webpack_require__(26);
-} else {
-  module.exports = __webpack_require__(29);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1223,7 +1177,7 @@ module.exports = EventListener;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1294,7 +1248,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1337,7 +1291,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1367,7 +1321,7 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1409,7 +1363,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1427,7 +1381,7 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1438,7 +1392,7 @@ var settle = __webpack_require__(45);
 var buildURL = __webpack_require__(47);
 var parseHeaders = __webpack_require__(48);
 var isURLSameOrigin = __webpack_require__(49);
-var createError = __webpack_require__(20);
+var createError = __webpack_require__(19);
 var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(50);
 
 module.exports = function xhrAdapter(config) {
@@ -1615,7 +1569,7 @@ module.exports = function xhrAdapter(config) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1640,7 +1594,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1652,7 +1606,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1678,7 +1632,7 @@ module.exports = Cancel;
 
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1688,7 +1642,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(12);
+var _reactDom = __webpack_require__(25);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -1703,7 +1657,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('target'));
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1733,7 +1687,7 @@ module.exports={Children:{map:S.map,forEach:S.forEach,count:S.count,toArray:S.to
 
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3439,6 +3393,52 @@ module.exports = ReactEntry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+function checkDCE() {
+  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+  if (
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
+  ) {
+    return;
+  }
+  if (process.env.NODE_ENV !== 'production') {
+    // This branch is unreachable because this function is only called
+    // in production, but the condition is true only in development.
+    // Therefore if the branch is still here, dead code elimination wasn't
+    // properly applied.
+    // Don't change the message. React DevTools relies on it. Also make sure
+    // this message doesn't occur elsewhere in this function, or it will cause
+    // a false positive.
+    throw new Error('^_^');
+  }
+  try {
+    // Verify that the code above has been dead code eliminated (DCE'd).
+    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
+  } catch (err) {
+    // DevTools shouldn't crash React, no matter what.
+    // We should still report in case we break this code.
+    console.error(err);
+  }
+}
+
+if (process.env.NODE_ENV === 'production') {
+  // DCE check should happen before ReactDOM bundle executes so that
+  // DevTools can report bad minification during injection.
+  checkDCE();
+  module.exports = __webpack_require__(26);
+} else {
+  module.exports = __webpack_require__(29);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
 /* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3453,7 +3453,7 @@ module.exports = ReactEntry;
  LICENSE file in the root directory of this source tree.
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(2);__webpack_require__(4);var l=__webpack_require__(10),n=__webpack_require__(5),ba=__webpack_require__(13),ca=__webpack_require__(3),da=__webpack_require__(6),ea=__webpack_require__(14),fa=__webpack_require__(15),ha=__webpack_require__(16),ia=__webpack_require__(17);
+var aa=__webpack_require__(2);__webpack_require__(4);var l=__webpack_require__(10),n=__webpack_require__(5),ba=__webpack_require__(12),ca=__webpack_require__(3),da=__webpack_require__(6),ea=__webpack_require__(13),fa=__webpack_require__(14),ha=__webpack_require__(15),ia=__webpack_require__(16);
 function w(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:w("227");
 function ja(a){switch(a){case "svg":return"http://www.w3.org/2000/svg";case "math":return"http://www.w3.org/1998/Math/MathML";default:return"http://www.w3.org/1999/xhtml"}}
 var ka={Namespaces:{html:"http://www.w3.org/1999/xhtml",mathml:"http://www.w3.org/1998/Math/MathML",svg:"http://www.w3.org/2000/svg"},getIntrinsicNamespace:ja,getChildNamespace:function(a,b){return null==a||"http://www.w3.org/1999/xhtml"===a?ja(b):"http://www.w3.org/2000/svg"===a&&"foreignObject"===b?"http://www.w3.org/1999/xhtml":a}},la=null,oa={};
@@ -3782,7 +3782,7 @@ var react = __webpack_require__(2);
 var invariant = __webpack_require__(4);
 var ExecutionEnvironment = __webpack_require__(10);
 var _assign = __webpack_require__(5);
-var EventListener = __webpack_require__(13);
+var EventListener = __webpack_require__(12);
 var require$$0 = __webpack_require__(7);
 var hyphenateStyleName = __webpack_require__(30);
 var emptyFunction = __webpack_require__(3);
@@ -3791,10 +3791,10 @@ var performanceNow = __webpack_require__(34);
 var propTypes = __webpack_require__(36);
 var emptyObject = __webpack_require__(6);
 var checkPropTypes = __webpack_require__(8);
-var shallowEqual = __webpack_require__(14);
-var containsNode = __webpack_require__(15);
-var focusNode = __webpack_require__(16);
-var getActiveElement = __webpack_require__(17);
+var shallowEqual = __webpack_require__(13);
+var containsNode = __webpack_require__(14);
+var focusNode = __webpack_require__(15);
+var getActiveElement = __webpack_require__(16);
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -21872,10 +21872,6 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(12);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
 var _axios = __webpack_require__(40);
 
 var _axios2 = _interopRequireDefault(_axios);
@@ -21956,7 +21952,7 @@ module.exports = __webpack_require__(41);
 
 
 var utils = __webpack_require__(1);
-var bind = __webpack_require__(18);
+var bind = __webpack_require__(17);
 var Axios = __webpack_require__(43);
 var defaults = __webpack_require__(11);
 
@@ -21991,9 +21987,9 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(22);
+axios.Cancel = __webpack_require__(21);
 axios.CancelToken = __webpack_require__(57);
-axios.isCancel = __webpack_require__(21);
+axios.isCancel = __webpack_require__(20);
 
 // Expose all/spread
 axios.all = function all(promises) {
@@ -22153,7 +22149,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 "use strict";
 
 
-var createError = __webpack_require__(20);
+var createError = __webpack_require__(19);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -22572,7 +22568,7 @@ module.exports = InterceptorManager;
 
 var utils = __webpack_require__(1);
 var transformData = __webpack_require__(54);
-var isCancel = __webpack_require__(21);
+var isCancel = __webpack_require__(20);
 var defaults = __webpack_require__(11);
 
 /**
@@ -22725,7 +22721,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 "use strict";
 
 
-var Cancel = __webpack_require__(22);
+var Cancel = __webpack_require__(21);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -22878,7 +22874,7 @@ var ProductDetails = function (_Component) {
 
       return [_react2.default.createElement(
         'main',
-        { key: 'main' },
+        { className: 'main-container', key: 'main' },
         _react2.default.createElement(
           'h1',
           { className: 'product__title' },
@@ -22891,8 +22887,8 @@ var ProductDetails = function (_Component) {
         }),
         _react2.default.createElement(_Carousel2.default, { images: Images, slidesToShow: 3 }),
         _react2.default.createElement(
-          'div',
-          null,
+          'section',
+          { 'aria-labelledby': 'price' },
           _react2.default.createElement(
             'span',
             { className: 'price' },
@@ -22909,28 +22905,32 @@ var ProductDetails = function (_Component) {
           { className: 'extras' },
           _react2.default.createElement(
             'li',
-            null,
+            { className: 'extras__item' },
             'spend $50, ship free'
           ),
           _react2.default.createElement(
             'li',
-            null,
+            { className: 'extras__item' },
             '$25 gift card with purchase of a select Ninja Blender'
           )
         ),
-        _react2.default.createElement(_QuantitySelector2.default, null),
         _react2.default.createElement(
           'section',
-          { className: 'button-set' },
+          { className: 'fulfillment', 'aria-labelledby': 'price' },
+          _react2.default.createElement(_QuantitySelector2.default, null),
           _react2.default.createElement(
-            'button',
-            { className: 'btn primary' },
-            'Pick up in store'
-          ),
-          _react2.default.createElement(
-            'button',
-            { className: 'btn secondary', autoFocus: true },
-            'Add to cart'
+            'div',
+            { className: 'button__set' },
+            _react2.default.createElement(
+              'button',
+              { className: 'btn btn__primary' },
+              'Pick up in store'
+            ),
+            _react2.default.createElement(
+              'button',
+              { className: 'btn btn__secondary', autoFocus: true },
+              'Add to cart'
+            )
           )
         ),
         _react2.default.createElement(
@@ -22941,28 +22941,32 @@ var ProductDetails = function (_Component) {
             { className: 'returns' },
             _react2.default.createElement(
               'p',
-              { className: 'returns-title' },
+              { className: 'returns__title' },
               'returns'
             ),
             _react2.default.createElement('p', {
-              className: 'returns-text',
+              className: 'returns__text',
               dangerouslySetInnerHTML: { __html: ReturnPolicy[0].legalCopy }
             })
           ),
           _react2.default.createElement(
-            'button',
-            { className: 'btn tertiary' },
-            'Add to registry'
-          ),
-          _react2.default.createElement(
-            'button',
-            { className: 'btn tertiary' },
-            'Add to list'
-          ),
-          _react2.default.createElement(
-            'button',
-            { className: 'btn tertiary' },
-            'Share'
+            'div',
+            { className: 'button__set' },
+            _react2.default.createElement(
+              'button',
+              { className: 'btn btn__tertiary' },
+              'Add to registry'
+            ),
+            _react2.default.createElement(
+              'button',
+              { className: 'btn btn__tertiary' },
+              'Add to list'
+            ),
+            _react2.default.createElement(
+              'button',
+              { className: 'btn btn__tertiary' },
+              'Share'
+            )
           )
         )
       ), _react2.default.createElement(_ReviewPanel2.default, {
@@ -23187,7 +23191,7 @@ var Reviews = function Reviews(_ref) {
         null,
         _react2.default.createElement(
           'tr',
-          { style: { borderBottom: 'solid 1px red' } },
+          { style: { borderBottom: 'solid 1px secondary-color' } },
           _react2.default.createElement(
             'th',
             null,
@@ -23291,7 +23295,7 @@ var Ratings = function Ratings(_ref) {
     "span",
     null,
     range(5).map(function (x, i) {
-      return i + 1 <= rating ? _react2.default.createElement("i", { key: i, className: "fa fa-star red" }) : _react2.default.createElement("i", { key: i, className: "fa fa-star" });
+      return i + 1 <= rating ? _react2.default.createElement("i", { key: i, className: "fa fa-star secondary-color" }) : _react2.default.createElement("i", { key: i, className: "fa fa-star" });
     })
   );
 };
@@ -23338,7 +23342,7 @@ exports = module.exports = __webpack_require__(66)(undefined);
 
 
 // module
-exports.push([module.i, "/* Setup */\n\n* {\n  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;\n  font-weight: 200;\n  color: hsl(0, 0%, 25%);\n}\n\nhtml {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n*,\n*:before,\n*:after {\n  -webkit-box-sizing: inherit;\n          box-sizing: inherit;\n}\n\n.red {\n  color: red;\n}\n\n.product__title {\n  text-align: center;\n}\n\n.product__image {\n  display: block;\n  margin: auto;\n  width: 80%;\n}\n\n.carousel {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n\n.carousel__button {\n  background: none;\n  border: none;\n}\n\n.carousel__images {\n  list-style-type: none;\n  padding: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.carousel__image {\n  height: 75px;\n  width: 75px;\n}\n\n.price {\n  font-size: 2rem;\n  font-weight: bold;\n}\n\n.price__description {\n  font-size: 12px;\n}\n\n.quantity__area {\n  border: solid 1px lightgray;\n  padding: 3px;\n}\n\n.quantity__button {\n  border: none;\n  background: lightgray;\n  border-radius: 50%;\n  padding: 5px;\n}\n\n.quantity__icon {\n  color: white;\n}\n\n/* convert */\n.extras {\n  border-top: solid 1px lightgray;\n  border-bottom: solid 1px lightgray;\n  padding-top: 15px;\n  padding-bottom: 15px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  list-style-type: none;\n}\n\n.extras > li {\n  color: red;\n  font-weight: 400;\n}\n\n.extras > li:before {\n  font-family: 'FontAwesome';\n  content: '\\F02B';\n  margin: 0 5px 0 -15px;\n  color: #f00;\n}\n\n.btn {\n  text-transform: uppercase;\n  border: none;\n  border-radius: 3px;\n  color: white;\n  font-size: 18px;\n  text-align: center;\n  padding: 10px 43px;\n}\n\n.primary {\n  background: -webkit-gradient(linear, left bottom, left top, color-stop(85%, black), to(white));\n  background: linear-gradient(0deg, black 85%, white);\n}\n\n.secondary {\n  background: -webkit-gradient(linear, left bottom, left top, color-stop(85%, red), to(white));\n  background: linear-gradient(0deg, red 85%, white);\n}\n\n.tertiary {\n  background: lightgray;\n  color: black;\n  padding: 5px 35px;\n  font-size: 12px;\n}\n\n.button-set {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n\n.product-highlights > ul {\n  padding-left: 19px;\n}\n\n.product-highlights > h2 {\n  font-size: 2rem;\n}\n\n.rating {\n  background-color: lightgray;\n}\n\n.rating-header {\n}\n.rating-header a {\n}\n\n.returns {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  margin-top: 15px;\n  margin-bottom: 15px;\n}\n\n.returns-title {\n  font-size: 18px;\n  font-weight: 400;\n}\n\n.returns-text {\n  font-size: 12px;\n  border-left: solid 1px gray;\n  padding-left: 8px;\n  margin-left: 8px;\n}\n\n.reviews-overall {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n\ntable {\n  background: lightgray;\n  border-radius: 3px;\n  border: 0;\n  border-collapse: separate;\n  border-spacing: 0 5px;\n  text-align: left;\n  padding: 15px;\n}\n\nthead tr th {\n  border-bottom: 1px solid hsl(0, 0%, 25%);\n  border-collapse: separate;\n  border-spacing: 5px 5px;\n  padding-bottom: 15px;\n}\n\n/* table {\n  background: pink;\n  border: 0;\n  border-collapse: separate;\n  border-spacing: 0 5px;\n}\nthead tr th {\n  border-bottom: 1px solid red;\n  border-collapse: separate;\n  border-spacing: 5px 5px;\n}\ntbody tr#first td {\n  border-top: 3px solid #4d4d4d;\n} */\n", ""]);
+exports.push([module.i, "/* Setup */\n\n* {\n  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;\n  font-weight: 200;\n  color: hsl(0, 0%, 25%);\n}\n\nhtml {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n*,\n*:before,\n*:after {\n  -webkit-box-sizing: inherit;\n          box-sizing: inherit;\n}\n\n.primary-color {\n  color: hsl(0, 0%, 25%);\n}\n.secondary-color {\n  color: #cc0000;\n}\n\n/* .main-container {\n} */\n\n.product__title {\n  text-align: center;\n  font-size: 1.5rem;\n}\n\n.product__image {\n  display: block;\n  margin: auto;\n  width: 80%;\n  margin-top: 2rem;\n}\n\n.carousel {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  margin-top: 4rem;\n}\n\n.carousel__button {\n  background: none;\n  border: none;\n}\n\n.carousel__images {\n  list-style-type: none;\n  padding: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.carousel__image {\n  height: 75px;\n  width: 75px;\n}\n\n.price {\n  font-size: 2rem;\n  font-weight: bold;\n}\n\n.price__description {\n  font-size: 12px;\n  margin-left: 0.25rem;\n}\n\n.extras {\n  border-top: solid 1px lightgray;\n  border-bottom: solid 1px lightgray;\n  padding-top: 15px;\n  padding-bottom: 15px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  list-style-type: none;\n  margin-top: 2rem;\n}\n\n.extras__item {\n  color: #cc0000;\n  font-weight: 400;\n}\n\n.extras__item:before {\n  font-family: 'FontAwesome';\n  content: '\\F02B';\n  margin: 0 5px 0 -15px;\n  color: #f00;\n}\n\n.quantity__area {\n  border: solid 1px lightgray;\n  padding: 3px;\n}\n\n.quantity__button {\n  border: none;\n  background: lightgray;\n  border-radius: 50%;\n  padding: 5px;\n}\n\n.quantity__icon {\n  color: white;\n}\n.fulfillment {\n}\n\n.button__set {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  margin-top: 1.5rem;\n}\n\n.returns {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  margin-top: 2rem;\n}\n\n.returns__title {\n  font-size: 18px;\n  font-weight: 400;\n}\n\n.returns__text {\n  font-size: 12px;\n  border-left: solid 1px gray;\n  padding-left: 8px;\n  margin-left: 8px;\n}\n\n/* convert */\n\n.btn {\n  text-transform: uppercase;\n  border: none;\n  border-radius: 3px;\n  color: white;\n  font-size: 18px;\n  text-align: center;\n  padding: 10px 43px;\n}\n\n.btn__primary {\n  background: -webkit-gradient(linear, left bottom, left top, color-stop(85%, black), to(white));\n  background: linear-gradient(0deg, black 85%, white);\n}\n\n.btn__secondary {\n  background: -webkit-gradient(linear, left bottom, left top, color-stop(85%, red), to(white));\n  background: linear-gradient(0deg, red 85%, white);\n}\n\n.btn__tertiary {\n  background: #f1ecec;\n  color: black;\n  padding: 5px 35px;\n  font-size: 0.75rem;\n}\n\n.product-highlights > ul {\n  padding-left: 19px;\n}\n\n.product-highlights > h2 {\n  font-size: 2rem;\n}\n\n.rating {\n  background-color: lightgray;\n}\n\n.rating-header {\n}\n.rating-header a {\n}\n\n.reviews-overall {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n\ntable {\n  background: lightgray;\n  border-radius: 3px;\n  border: 0;\n  border-collapse: separate;\n  border-spacing: 0 5px;\n  text-align: left;\n  padding: 15px;\n}\n\nthead tr th {\n  border-bottom: 1px solid hsl(0, 0%, 25%);\n  border-collapse: separate;\n  border-spacing: 5px 5px;\n  padding-bottom: 15px;\n}\n", ""]);
 
 // exports
 

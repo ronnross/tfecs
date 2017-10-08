@@ -2,20 +2,21 @@
 
 ## Browser support
 todo
-- ~~static layout~~
+- ~~static layout mobile~~
 - ~~format and lint~~
 - ~~express~~
 - ~~serve static json~~
 - ~~webpack~~
 - ~~react~~
 - ~~jest~~
-- static to components with data
-- data in components
-- publish layout
+- ~~static to components with data~~
+- ~~data in components~~
+- Refine layout for desktop
 - interactive
 - restructure project
 - redux
 - deploy
+- performance
 
 ## setup
 `yarn`

@@ -10,7 +10,7 @@ const Ratings = ({ rating }) => (
     {range(5).map(
       (x, i) =>
         i + 1 <= rating ? (
-          <i key={i} className="fa fa-star red" />
+          <i key={i} className="fa fa-star secondary-color" />
         ) : (
           <i key={i} className="fa fa-star" />
         )
