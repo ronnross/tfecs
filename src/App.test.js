@@ -8,7 +8,12 @@ import { shallow } from 'enzyme';
 Enzyme.configure({ adapter: new Adapter() });
 describe('<App />', () => {
   it('renders 1 <App /> component', () => {
-    const comp = shallow(<App />);
-    expect(comp).toHaveLength(1);
+    const wrapper = shallow(<App />);
+    expect(wrapper).toHaveLength(1);
+  });
+
+  it('renders 1 <App /> component', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.text()).toEqual('Hello React!');
   });
 });

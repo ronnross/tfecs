@@ -58,5 +58,11 @@
   },
   "prettier": {
     "singleQuote": true
+  },
+  "jest": {
+    "unmockedModulePathPatterns": [
+      "node_modules/react/",
+      "node_modules/enzyme/"
+    ]
   }
 }

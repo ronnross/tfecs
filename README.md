@@ -9,7 +9,7 @@ todo
 - ~~webpack~~
 - ~~react~~
 - ~~jest~~
-- static to components
+- static to components with data
 - data in components
 - publish layout
 - interactive
