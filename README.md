@@ -4,6 +4,7 @@ todo
 - ~~static layout~~
 - ~~format and lint~~
 - express
+- serve static json
 - webpack
 - react
 - jest
@@ -11,4 +12,6 @@ todo
 - data in components
 - polish layout
 - interactive
+- restructure project
 - redux
+- deploy
