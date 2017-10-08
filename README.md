@@ -1,7 +1,8 @@
 TFECS
 
 todo
-- static layout
+- ~~static layout~~
+- format and lint
 - express
 - webpack
 - react-
