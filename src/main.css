@@ -112,8 +112,27 @@ html {
 }
 
 .quantity__area {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 200px;
   border: solid 1px lightgray;
-  padding: 3px;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.quantity__display {
+  font-weight: bold;
+}
+
+.quantity__selection {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+}
+.quantity__title {
+  font-size: var(--f2);
+  font-weight: 400;
 }
 
 .quantity__button {
@@ -216,7 +235,6 @@ html {
 .reviews__overall a:hover {
   text-decoration: underline;
 }
-/* convert */
 
 .rating {
   background-color: var(--tertiary);
