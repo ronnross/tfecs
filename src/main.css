@@ -301,3 +301,37 @@ th {
 td {
   vertical-align: top;
 }
+
+@media (min-width: 1024px) {
+  body {
+    margin: auto;
+    padding: 0 100px;
+  }
+
+  .product__image {
+    width: 50%;
+  }
+
+  .container {
+    margin-top: 4rem;
+  }
+
+  .product__panel--view {
+    float: left;
+    width: 49%;
+  }
+
+  .product__panel--details {
+    float: right;
+    width: 49%;
+  }
+
+  .reviews {
+    float: left;
+    width: 49%;
+  }
+
+  .product__title {
+    margin-top: 0;
+  }
+}

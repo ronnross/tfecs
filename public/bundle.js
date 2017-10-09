@@ -25398,115 +25398,123 @@ var ProductDetails = function (_Component) {
 
       return [_react2.default.createElement(
         'main',
-        { key: 'main' },
+        { className: 'container', key: 'main' },
         _react2.default.createElement(
-          'h1',
-          { className: 'product__title' },
-          title
-        ),
-        _react2.default.createElement('img', {
-          className: 'product__image',
-          src: Images[0].PrimaryImage[0].image,
-          alt: title
-        }),
-        _react2.default.createElement(_Carousel2.default, { images: Images, slidesToShow: 3 }),
-        _react2.default.createElement(
-          'section',
-          { 'aria-labelledby': 'price' },
+          'div',
+          { className: 'product__panel--view' },
           _react2.default.createElement(
-            'span',
-            { className: 'price' },
-            Offers[0].OfferPrice[0].formattedPriceValue
+            'h1',
+            { className: 'product__title' },
+            title
           ),
-          _react2.default.createElement(
-            'span',
-            { className: 'price__description' },
-            Offers[0].OfferPrice[0].priceQualifier
-          )
+          _react2.default.createElement('img', {
+            className: 'product__image',
+            src: Images[0].PrimaryImage[0].image,
+            alt: title
+          }),
+          _react2.default.createElement(_Carousel2.default, { images: Images, slidesToShow: 3 })
         ),
         _react2.default.createElement(
-          'ul',
-          { className: 'extras' },
+          'div',
+          { className: 'product__panel--details' },
           _react2.default.createElement(
-            'li',
-            { className: 'extras__item' },
-            'spend $50, ship free'
-          ),
-          _react2.default.createElement(
-            'li',
-            { className: 'extras__item' },
-            '$25 gift card with purchase of a select Ninja Blender'
-          )
-        ),
-        _react2.default.createElement(
-          'section',
-          { className: 'fulfillment', 'aria-labelledby': 'price' },
-          _react2.default.createElement(_QuantitySelector2.default, null),
-          _react2.default.createElement(
-            'div',
-            { className: 'button__set' },
+            'section',
+            { 'aria-labelledby': 'price' },
             _react2.default.createElement(
-              'button',
-              { className: 'btn btn__primary' },
-              'Pick up in store'
+              'span',
+              { className: 'price' },
+              Offers[0].OfferPrice[0].formattedPriceValue
             ),
             _react2.default.createElement(
-              'button',
-              { className: 'btn btn__secondary', autoFocus: true },
-              'Add to cart'
+              'span',
+              { className: 'price__description' },
+              Offers[0].OfferPrice[0].priceQualifier
             )
-          )
-        ),
-        _react2.default.createElement(
-          'section',
-          null,
-          _react2.default.createElement(
-            'div',
-            { className: 'returns' },
-            _react2.default.createElement(
-              'p',
-              { className: 'returns__title' },
-              'returns'
-            ),
-            _react2.default.createElement('p', {
-              className: 'returns__text',
-              dangerouslySetInnerHTML: { __html: ReturnPolicy[0].legalCopy }
-            })
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'button__set' },
-            _react2.default.createElement(
-              'button',
-              { className: 'btn btn__tertiary' },
-              'Add to registry'
-            ),
-            _react2.default.createElement(
-              'button',
-              { className: 'btn btn__tertiary' },
-              'Add to list'
-            ),
-            _react2.default.createElement(
-              'button',
-              { className: 'btn btn__tertiary' },
-              'Share'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'section',
-          { id: 'highlights' },
-          _react2.default.createElement(
-            'h2',
-            { className: 'highlights__title' },
-            'product highlights'
           ),
           _react2.default.createElement(
             'ul',
-            { className: 'highlights__list' },
-            ItemDescription[0].features.map(function (f, idx) {
-              return _react2.default.createElement('li', { key: idx, dangerouslySetInnerHTML: { __html: f } });
-            })
+            { className: 'extras' },
+            _react2.default.createElement(
+              'li',
+              { className: 'extras__item' },
+              'spend $50, ship free'
+            ),
+            _react2.default.createElement(
+              'li',
+              { className: 'extras__item' },
+              '$25 gift card with purchase of a select Ninja Blender'
+            )
+          ),
+          _react2.default.createElement(
+            'section',
+            { className: 'fulfillment', 'aria-labelledby': 'price' },
+            _react2.default.createElement(_QuantitySelector2.default, null),
+            _react2.default.createElement(
+              'div',
+              { className: 'button__set' },
+              _react2.default.createElement(
+                'button',
+                { className: 'btn btn__primary' },
+                'Pick up in store'
+              ),
+              _react2.default.createElement(
+                'button',
+                { className: 'btn btn__secondary', autoFocus: true },
+                'Add to cart'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'section',
+            null,
+            _react2.default.createElement(
+              'div',
+              { className: 'returns' },
+              _react2.default.createElement(
+                'p',
+                { className: 'returns__title' },
+                'returns'
+              ),
+              _react2.default.createElement('p', {
+                className: 'returns__text',
+                dangerouslySetInnerHTML: { __html: ReturnPolicy[0].legalCopy }
+              })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'button__set' },
+              _react2.default.createElement(
+                'button',
+                { className: 'btn btn__tertiary' },
+                'Add to registry'
+              ),
+              _react2.default.createElement(
+                'button',
+                { className: 'btn btn__tertiary' },
+                'Add to list'
+              ),
+              _react2.default.createElement(
+                'button',
+                { className: 'btn btn__tertiary' },
+                'Share'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'section',
+            { id: 'highlights' },
+            _react2.default.createElement(
+              'h2',
+              { className: 'highlights__title' },
+              'product highlights'
+            ),
+            _react2.default.createElement(
+              'ul',
+              { className: 'highlights__list' },
+              ItemDescription[0].features.map(function (f, idx) {
+                return _react2.default.createElement('li', { key: idx, dangerouslySetInnerHTML: { __html: f } });
+              })
+            )
           )
         )
       ), _react2.default.createElement(_ReviewPanel2.default, {
@@ -30113,7 +30121,7 @@ exports = module.exports = __webpack_require__(225)(undefined);
 
 
 // module
-exports.push([module.i, "/* Setup */\n\n* {\n  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;\n  font-weight: 200;\n  color: hsl(0, 0%, 25%);\n}\n\nhtml {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n*,\n*:before,\n*:after {\n  -webkit-box-sizing: inherit;\n          box-sizing: inherit;\n}\n\n.primary-color {\n  color: hsl(0, 0%, 25%);\n}\n.secondary-color {\n  color: #ac0000;\n}\n\n.pl1 {\n  padding-left: 2rem;\n}\n\n.product__title {\n  text-align: center;\n  font-size: 1.5rem;\n}\n\n.product__image {\n  display: block;\n  margin: auto;\n  width: 80%;\n  margin-top: 2rem;\n}\n\n.carousel {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  margin-top: 4rem;\n}\n\n.carousel__button {\n  background: none;\n  border: none;\n}\n\n.carousel__images {\n  list-style-type: none;\n  padding: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.carousel__image {\n  height: 75px;\n  width: 75px;\n}\n\n.price {\n  font-size: 2rem;\n  font-weight: bold;\n}\n\n.price__description {\n  font-size: 12px;\n  margin-left: 0.25rem;\n}\n\n.extras {\n  border-top: solid 1px lightgray;\n  border-bottom: solid 1px lightgray;\n  padding-top: 15px;\n  padding-bottom: 15px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  list-style-type: none;\n  margin-top: 2rem;\n}\n\n.extras__item {\n  color: #c00;\n  font-weight: 400;\n}\n\n.extras__item:before {\n  font-family: 'FontAwesome';\n  content: '\\F02B';\n  margin: 0 5px 0 -15px;\n  color: #c00;\n}\n\n.quantity__area {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: baseline;\n      -ms-flex-align: baseline;\n          align-items: baseline;\n  width: 200px;\n  border: solid 1px lightgray;\n  border-radius: 3px;\n  padding: 5px 10px;\n}\n\n.quantity__display {\n  font-weight: bold;\n}\n\n.quantity__selection {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  width: 35%;\n}\n.quantity__title {\n  font-size: 0.875rem;\n  font-weight: 400;\n}\n\n.quantity__button {\n  border: none;\n  background: lightgray;\n  border-radius: 50%;\n  padding: 5px;\n}\n\n.quantity__icon {\n  color: white;\n}\n\n.button__set {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  margin-top: 1.5rem;\n}\n\n.button__set > button {\n  margin-right: 10px;\n}\n\n.button__set > button:last-child {\n  margin-right: 0;\n}\n\n.returns {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  margin-top: 2rem;\n}\n\n.returns__title {\n  font-size: 18px;\n  font-weight: 400;\n}\n\n.returns__text {\n  font-size: 12px;\n  border-left: solid 1px gray;\n  padding-left: 8px;\n  margin-left: 8px;\n}\n\n.btn {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 50%;\n          flex: 1 1 50%;\n  text-transform: uppercase;\n  border: none;\n  border-radius: 3px;\n  color: white;\n  font-size: 0.875rem;\n  text-align: center;\n  padding-top: 10px;\n  padding-bottom: 10px;\n}\n\n.btn__primary {\n  background: -webkit-gradient(linear, left bottom, left top, color-stop(85%, black), to(white));\n  background: linear-gradient(0deg, black 85%, white);\n}\n\n.btn__secondary {\n  background: -webkit-gradient(linear, left bottom, left top, color-stop(85%, #ac0000), to(white));\n  background: linear-gradient(0deg, #ac0000 85%, white);\n}\n\n.btn__tertiary {\n  background: rgb(241, 236, 236);\n  color: black;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  font-size: 0.75rem;\n}\n\n.highlights__list {\n  padding-left: 19px;\n}\n\n.highlights__title {\n  font-size: 2rem;\n  font-weight: 400;\n}\n\n.reviews {\n  margin-top: 3rem;\n}\n\n.reviews__overall {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: baseline;\n      -ms-flex-align: baseline;\n          align-items: baseline;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n\n.reviews__stars {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: baseline;\n      -ms-flex-align: baseline;\n          align-items: baseline;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n}\n\n.reviews__stars p {\n  padding-left: 10px;\n  font-weight: bold;\n}\n\n.reviews__overall a {\n  font-weight: bold;\n  text-decoration: none;\n}\n\n.reviews__overall a:hover {\n  text-decoration: underline;\n}\n\n.rating {\n  background-color: rgb(241, 236, 236);\n}\n\n.rating__header {\n  font-weight: 400;\n}\n\n.rating__sub {\n  font-size: 0.75rem;\n  font-weight: 200;\n}\n\n.rating__review {\n  padding-top: 1rem;\n}\n\n.rating__title {\n  font-weight: bold;\n  margin: 0;\n}\n\n.rating__text {\n  font-size: 0.875rem;\n  margin-top: 0;\n}\n\n.rating__user {\n  font-size: 0.875rem;\n}\n\n.rating__username {\n  color: blue;\n  padding-right: 5px;\n}\n\ntable {\n  background: rgb(241, 236, 236);\n  border-radius: 3px;\n  border: 0;\n  border-collapse: separate;\n  border-spacing: 0 5px;\n  text-align: left;\n  padding: 15px;\n  margin-top: 0.5rem;\n}\n\nth {\n  border-bottom: 1px solid hsl(0, 0%, 25%);\n  border-collapse: separate;\n  border-spacing: 5px 5px;\n  padding-bottom: 15px;\n  vertical-align: top;\n}\n\ntd {\n  vertical-align: top;\n}\n", ""]);
+exports.push([module.i, "/* Setup */\n\n* {\n  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;\n  font-weight: 200;\n  color: hsl(0, 0%, 25%);\n}\n\nhtml {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n*,\n*:before,\n*:after {\n  -webkit-box-sizing: inherit;\n          box-sizing: inherit;\n}\n\n.primary-color {\n  color: hsl(0, 0%, 25%);\n}\n.secondary-color {\n  color: #ac0000;\n}\n\n.pl1 {\n  padding-left: 2rem;\n}\n\n.product__title {\n  text-align: center;\n  font-size: 1.5rem;\n}\n\n.product__image {\n  display: block;\n  margin: auto;\n  width: 80%;\n  margin-top: 2rem;\n}\n\n.carousel {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  margin-top: 4rem;\n}\n\n.carousel__button {\n  background: none;\n  border: none;\n}\n\n.carousel__images {\n  list-style-type: none;\n  padding: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.carousel__image {\n  height: 75px;\n  width: 75px;\n}\n\n.price {\n  font-size: 2rem;\n  font-weight: bold;\n}\n\n.price__description {\n  font-size: 12px;\n  margin-left: 0.25rem;\n}\n\n.extras {\n  border-top: solid 1px lightgray;\n  border-bottom: solid 1px lightgray;\n  padding-top: 15px;\n  padding-bottom: 15px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  list-style-type: none;\n  margin-top: 2rem;\n}\n\n.extras__item {\n  color: #c00;\n  font-weight: 400;\n}\n\n.extras__item:before {\n  font-family: 'FontAwesome';\n  content: '\\F02B';\n  margin: 0 5px 0 -15px;\n  color: #c00;\n}\n\n.quantity__area {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: baseline;\n      -ms-flex-align: baseline;\n          align-items: baseline;\n  width: 200px;\n  border: solid 1px lightgray;\n  border-radius: 3px;\n  padding: 5px 10px;\n}\n\n.quantity__display {\n  font-weight: bold;\n}\n\n.quantity__selection {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  width: 35%;\n}\n.quantity__title {\n  font-size: 0.875rem;\n  font-weight: 400;\n}\n\n.quantity__button {\n  border: none;\n  background: lightgray;\n  border-radius: 50%;\n  padding: 5px;\n}\n\n.quantity__icon {\n  color: white;\n}\n\n.button__set {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  margin-top: 1.5rem;\n}\n\n.button__set > button {\n  margin-right: 10px;\n}\n\n.button__set > button:last-child {\n  margin-right: 0;\n}\n\n.returns {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  margin-top: 2rem;\n}\n\n.returns__title {\n  font-size: 18px;\n  font-weight: 400;\n}\n\n.returns__text {\n  font-size: 12px;\n  border-left: solid 1px gray;\n  padding-left: 8px;\n  margin-left: 8px;\n}\n\n.btn {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 50%;\n          flex: 1 1 50%;\n  text-transform: uppercase;\n  border: none;\n  border-radius: 3px;\n  color: white;\n  font-size: 0.875rem;\n  text-align: center;\n  padding-top: 10px;\n  padding-bottom: 10px;\n}\n\n.btn__primary {\n  background: -webkit-gradient(linear, left bottom, left top, color-stop(85%, black), to(white));\n  background: linear-gradient(0deg, black 85%, white);\n}\n\n.btn__secondary {\n  background: -webkit-gradient(linear, left bottom, left top, color-stop(85%, #ac0000), to(white));\n  background: linear-gradient(0deg, #ac0000 85%, white);\n}\n\n.btn__tertiary {\n  background: rgb(241, 236, 236);\n  color: black;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  font-size: 0.75rem;\n}\n\n.highlights__list {\n  padding-left: 19px;\n}\n\n.highlights__title {\n  font-size: 2rem;\n  font-weight: 400;\n}\n\n.reviews {\n  margin-top: 3rem;\n}\n\n.reviews__overall {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: baseline;\n      -ms-flex-align: baseline;\n          align-items: baseline;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n\n.reviews__stars {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: baseline;\n      -ms-flex-align: baseline;\n          align-items: baseline;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n}\n\n.reviews__stars p {\n  padding-left: 10px;\n  font-weight: bold;\n}\n\n.reviews__overall a {\n  font-weight: bold;\n  text-decoration: none;\n}\n\n.reviews__overall a:hover {\n  text-decoration: underline;\n}\n\n.rating {\n  background-color: rgb(241, 236, 236);\n}\n\n.rating__header {\n  font-weight: 400;\n}\n\n.rating__sub {\n  font-size: 0.75rem;\n  font-weight: 200;\n}\n\n.rating__review {\n  padding-top: 1rem;\n}\n\n.rating__title {\n  font-weight: bold;\n  margin: 0;\n}\n\n.rating__text {\n  font-size: 0.875rem;\n  margin-top: 0;\n}\n\n.rating__user {\n  font-size: 0.875rem;\n}\n\n.rating__username {\n  color: blue;\n  padding-right: 5px;\n}\n\ntable {\n  background: rgb(241, 236, 236);\n  border-radius: 3px;\n  border: 0;\n  border-collapse: separate;\n  border-spacing: 0 5px;\n  text-align: left;\n  padding: 15px;\n  margin-top: 0.5rem;\n}\n\nth {\n  border-bottom: 1px solid hsl(0, 0%, 25%);\n  border-collapse: separate;\n  border-spacing: 5px 5px;\n  padding-bottom: 15px;\n  vertical-align: top;\n}\n\ntd {\n  vertical-align: top;\n}\n\n@media (min-width: 1024px) {\n  body {\n    margin: auto;\n    padding: 0 100px;\n  }\n\n  .product__image {\n    width: 50%;\n  }\n\n  .container {\n    margin-top: 4rem;\n  }\n\n  .product__panel--view {\n    float: left;\n    width: 49%;\n  }\n\n  .product__panel--details {\n    float: right;\n    width: 49%;\n  }\n\n  .reviews {\n    float: left;\n    width: 49%;\n  }\n\n  .product__title {\n    margin-top: 0;\n  }\n}\n", ""]);
 
 // exports
 
