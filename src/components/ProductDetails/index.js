@@ -18,7 +18,7 @@ class ProductDetails extends Component {
       CustomerReview
     } = this.props.product;
     return [
-      <main className="main-container" key={'main'}>
+      <main key={'main'}>
         <h1 className="product__title">{title}</h1>
         <img
           className="product__image"

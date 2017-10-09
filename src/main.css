@@ -40,9 +40,6 @@ html {
   padding-left: 2rem;
 }
 
-/* .main-container {
-} */
-
 .product__title {
   text-align: center;
   font-size: var(--f5);
@@ -145,8 +142,6 @@ html {
 .quantity__icon {
   color: white;
 }
-.fulfillment {
-}
 
 .button__set {
   display: flex;
@@ -174,6 +169,7 @@ html {
 
 .btn {
   text-transform: uppercase;
+  display: inline;
   border: none;
   border-radius: 3px;
   color: white;
@@ -263,11 +259,11 @@ html {
   margin-top: 0;
 }
 
-.rating_user {
+.rating__user {
   font-size: var(--f2);
 }
 
-.rating_username {
+.rating__username {
   color: blue;
   padding-right: 5px;
 }

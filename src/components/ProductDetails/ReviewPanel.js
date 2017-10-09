@@ -36,8 +36,8 @@ const Reviews = ({ data, reviews }) => {
               <Ratings rating={Pro[0].overallRating} size={1} />
               <h3 className="rating__title">{Pro[0].title}</h3>
               <p className="rating__text">{Pro[0].review}</p>
-              <p className="rating_user">
-                <span className="rating_username">{Pro[0].screenName}</span>
+              <p className="rating__user">
+                <span className="rating__username">{Pro[0].screenName}</span>
                 {format(Pro[0].datePosted, localDate)}
               </p>
             </td>
@@ -45,8 +45,8 @@ const Reviews = ({ data, reviews }) => {
               <Ratings rating={Con[0].overallRating} size={1} />
               <h3 className="rating__title">{Con[0].title}</h3>
               <p className="rating__text">{Con[0].review}</p>
-              <p className="rating_user">
-                <span className="rating_username">{Con[0].screenName}</span>
+              <p className="rating__user">
+                <span className="rating__username">{Con[0].screenName}</span>
                 {format(Con[0].datePosted, localDate)}
               </p>
             </td>
