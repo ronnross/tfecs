@@ -36,6 +36,10 @@ html {
   color: var(--secondary);
 }
 
+.pl1 {
+  padding-left: 2rem;
+}
+
 /* .main-container {
 } */
 
@@ -149,8 +153,6 @@ html {
   margin-left: 8px;
 }
 
-/* convert */
-
 .btn {
   text-transform: uppercase;
   border: none;
@@ -176,36 +178,91 @@ html {
   font-size: var(--f1);
 }
 
-.product-highlights > ul {
+.highlights__list {
   padding-left: 19px;
 }
 
-.product-highlights > h2 {
-  font-size: 2rem;
+.highlights__title {
+  font-size: var(--f6);
+  font-weight: 400;
 }
 
-.rating {
-  background-color: lightgray;
+.reviews {
+  margin-top: 3rem;
 }
 
-.rating-header {
-}
-.rating-header a {
-}
-
-.reviews-overall {
+.reviews__overall {
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
 }
 
+.reviews__stars {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+.reviews__stars p {
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.reviews__overall a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.reviews__overall a:hover {
+  text-decoration: underline;
+}
+/* convert */
+
+.rating {
+  background-color: var(--tertiary);
+}
+
+.rating__header {
+  font-weight: 400;
+}
+
+.rating__sub {
+  font-size: var(--f1);
+  font-weight: 200;
+}
+
+.rating__review {
+  padding-top: 1rem;
+}
+
+.rating__title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.rating__text {
+  font-size: var(--f2);
+  margin-top: 0;
+}
+
+.rating_user {
+  font-size: var(--f2);
+}
+
+.rating_username {
+  color: blue;
+  padding-right: 5px;
+}
+
 table {
-  background: lightgray;
+  background: var(--tertiary);
   border-radius: 3px;
   border: 0;
   border-collapse: separate;
   border-spacing: 0 5px;
   text-align: left;
   padding: 15px;
+  margin-top: 0.5rem;
 }
 
 thead tr th {

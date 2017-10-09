@@ -1,52 +1,53 @@
 import React from 'react';
+import { format } from 'date-fns';
 import Ratings from '../DesignSystem/Ratings';
+
+const localDate = 'MMM DD, YYYY';
 
 const Reviews = ({ data, reviews }) => {
   console.log('reviews', reviews);
   const { totalReviews, consolidatedOverallRating, Con, Pro } = reviews[0];
 
   return (
-    <aside className="product-highlights">
-      <h2>Product hightlights!</h2>
-      <ul className="">
-        {data[0].features.map((f, idx) => (
-          <li key={idx} dangerouslySetInnerHTML={{ __html: f }} />
-        ))}
-      </ul>
-      <div className="reviews-overall">
-        <span>
-          <Ratings rating={consolidatedOverallRating} />
-          overall
+    <aside className="reviews">
+      <div className="reviews__overall">
+        <span className="reviews__stars">
+          <Ratings rating={consolidatedOverallRating} size={2} />
+          <p>overall</p>
         </span>
         <a href="# ">view all {totalReviews} reviews</a>
       </div>
       <table>
         <thead>
           <tr style={{ borderBottom: 'solid 1px secondary-color' }}>
-            <th>
-              PRO <br />most helpful 4-5 star reviews
+            <th className="rating__header">
+              PRO
+              <div className="rating__sub">most helpful 4-5 star reviews</div>
             </th>
-            <th>
-              CON <br />most helpful 1-2 star reviews
+            <th className="rating__header pl1">
+              CON
+              <div className="rating__sub">most helpful 1-2 star reviews</div>
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>
-              <Ratings rating={Pro[0].overallRating} />
-              <h3>{Pro[0].title}</h3>
-              <p>{Pro[0].review}</p>
-              <p>
-                {Pro[0].screenName} {Pro[0].datePosted}
+            <td className="rating__review">
+              <Ratings rating={Pro[0].overallRating} size={1} />
+              <h3 className="rating__title">{Pro[0].title}</h3>
+              <p className="rating__text">{Pro[0].review}</p>
+              <p className="rating_user">
+                <span className="rating_username">{Pro[0].screenName}</span>
+                {format(Pro[0].datePosted, localDate)}
               </p>
             </td>
-            <td>
-              <Ratings rating={Con[0].overallRating} />
-              <h3>{Con[0].title}</h3>
-              <p>{Con[0].review}</p>
-              <p>
-                {Con[0].screenName} {Con[0].datePosted}
+            <td className="rating__review pl1">
+              <Ratings rating={Con[0].overallRating} size={1} />
+              <h3 className="rating__title">{Con[0].title}</h3>
+              <p className="rating__text">{Con[0].review}</p>
+              <p className="rating_user">
+                <span className="rating_username">{Con[0].screenName}</span>
+                {format(Con[0].datePosted, localDate)}
               </p>
             </td>
           </tr>

@@ -63,6 +63,14 @@ class ProductDetails extends Component {
             <button className="btn btn__tertiary">Share</button>
           </div>
         </section>
+        <section id="highlights">
+          <h2 className="highlights__title">product highlights</h2>
+          <ul className="highlights__list">
+            {ItemDescription[0].features.map((f, idx) => (
+              <li key={idx} dangerouslySetInnerHTML={{ __html: f }} />
+            ))}
+          </ul>
+        </section>
       </main>,
       <ReviewPanel
         key={'reviews'}
