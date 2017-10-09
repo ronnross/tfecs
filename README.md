@@ -18,6 +18,12 @@ todo
 - deploy
 - performance
 
+### tested on 
+Mac OSX Chrome 60
+iPhone 6
+Nexus 5x
+Nexus 6p
+
 ## setup
 `yarn`
 
@@ -33,3 +39,5 @@ todo
 
 ### build
 `yarn build`
+
+
