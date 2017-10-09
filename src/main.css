@@ -65,15 +65,22 @@ html {
   border: none;
 }
 
+.carousel__button:hover {
+  cursor: pointer;
+}
+
 .carousel__images {
   list-style-type: none;
   padding: 0;
   display: flex;
+  width: 235px;
+  overflow: hidden;
 }
 
 .carousel__image {
   height: 75px;
   width: 75px;
+  margin-right: 5px;
 }
 
 .price {
@@ -186,6 +193,10 @@ html {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.btn:hover {
+  cursor: pointer;
 }
 
 .btn__primary {

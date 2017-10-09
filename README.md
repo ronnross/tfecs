@@ -12,7 +12,7 @@ todo
 - ~~static to components with data~~
 - ~~data in components~~
 - ~~Refine layout for desktop~~
-- interactive
+- ~~interactive~~
 - restructure project
 - redux
 - deploy

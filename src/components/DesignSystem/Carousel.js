@@ -3,42 +3,64 @@ import React, { Component } from 'react';
 class Carousel extends Component {
   constructor(props) {
     super(props);
-    this.props = props;
+    this.state = {
+      index: 0,
+      len: this.props.images[0].AlternateImages.length
+    };
   }
+
+  handleShift(direction) {
+    console.log('ok');
+    if (direction === 'left') {
+      this.setState({ index: this.state.index - 1 });
+      this.stupid.scrollBy({
+        left: -80,
+        behavior: 'smooth'
+      });
+    } else {
+      this.setState({ index: this.state.index + 1 });
+      this.stupid.scrollBy({
+        left: 80,
+        behavior: 'smooth'
+      });
+    }
+  }
+
   render() {
     const { images, slidesToShow } = this.props;
     const AlternateImages = images[0].AlternateImages;
+    const { index, len } = this.state;
     return (
       <div className="carousel">
-        <button className="carousel__button">
+        <button
+          className="carousel__button"
+          disabled={index === 0}
+          onClick={() => this.handleShift('left')}
+        >
           <i className="fa fa-angle-left fa-4x" />
         </button>
-        <ul className="carousel__images">
+        <div
+          className="carousel__images"
+          ref={stupid => {
+            this.stupid = stupid;
+          }}
+        >
           {AlternateImages.map((img, idx) => {
-            if (idx >= slidesToShow) {
-              return (
-                <li key={idx}>
-                  <img
-                    className="carousel__image"
-                    src={img.image}
-                    alt="product tile"
-                    style={{ display: 'none' }}
-                  />
-                </li>
-              );
-            }
             return (
-              <li key={idx}>
-                <img
-                  className="carousel__image"
-                  src={img.image}
-                  alt="product tile"
-                />
-              </li>
+              <img
+                key={idx}
+                className="carousel__image"
+                src={img.image}
+                alt="product tile"
+              />
             );
           })}
-        </ul>
-        <button className="carousel__button">
+        </div>
+        <button
+          className="carousel__button"
+          disabled={index === len - 3}
+          onClick={() => this.handleShift('right')}
+        >
           <i className="fa fa-angle-right fa-4x" />
         </button>
       </div>
