@@ -25394,8 +25394,14 @@ var ProductDetails = function (_Component) {
           Offers = _props$product.Offers,
           ItemDescription = _props$product.ItemDescription,
           ReturnPolicy = _props$product.ReturnPolicy,
-          CustomerReview = _props$product.CustomerReview;
+          CustomerReview = _props$product.CustomerReview,
+          purchasingChannelCode = _props$product.purchasingChannelCode;
 
+
+      var showAddToCart = ['0', '1'].includes(purchasingChannelCode);
+      var showPickUp = ['0', '2'].includes(purchasingChannelCode);
+
+      console.log(showAddToCart, showPickUp);
       return [_react2.default.createElement(
         'main',
         { className: 'container', key: 'main' },
@@ -25452,12 +25458,12 @@ var ProductDetails = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'button__set' },
-              _react2.default.createElement(
+              showPickUp && _react2.default.createElement(
                 'button',
                 { className: 'btn btn__primary' },
                 'Pick up in store'
               ),
-              _react2.default.createElement(
+              showAddToCart && _react2.default.createElement(
                 'button',
                 { className: 'btn btn__secondary', autoFocus: true },
                 'Add to cart'

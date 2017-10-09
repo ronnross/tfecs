@@ -11,7 +11,7 @@ todo
 - ~~jest~~
 - ~~static to components with data~~
 - ~~data in components~~
-- Refine layout for desktop
+- ~~Refine layout for desktop~~
 - interactive
 - restructure project
 - redux

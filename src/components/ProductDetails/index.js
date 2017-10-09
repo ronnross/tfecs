@@ -15,8 +15,14 @@ class ProductDetails extends Component {
       Offers,
       ItemDescription,
       ReturnPolicy,
-      CustomerReview
+      CustomerReview,
+      purchasingChannelCode
     } = this.props.product;
+
+    const showAddToCart = ['0', '1'].includes(purchasingChannelCode);
+    const showPickUp = ['0', '2'].includes(purchasingChannelCode);
+
+    console.log(showAddToCart, showPickUp);
     return [
       <main className="container" key={'main'}>
         <div className="product__panel--view">
@@ -46,10 +52,14 @@ class ProductDetails extends Component {
           <section className="fulfillment" aria-labelledby="price">
             <QuantitySelector />
             <div className="button__set">
-              <button className="btn btn__primary">Pick up in store</button>
-              <button className="btn btn__secondary" autoFocus>
-                Add to cart
-              </button>
+              {showPickUp && (
+                <button className="btn btn__primary">Pick up in store</button>
+              )}
+              {showAddToCart && (
+                <button className="btn btn__secondary" autoFocus>
+                  Add to cart
+                </button>
+              )}
             </div>
           </section>
           <section>
