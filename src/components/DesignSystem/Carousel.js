@@ -52,6 +52,7 @@ class Carousel extends Component {
                 key={idx}
                 className="carousel__image"
                 src={img.image}
+                onClick={() => this.props.updateImage(img.image)}
                 alt="product tile"
               />
             );

@@ -7,7 +7,15 @@ class ProductDetails extends Component {
   constructor(props) {
     super(props);
     this.props = props;
+    this.state = {
+      selectedImage: this.props.product.Images[0].PrimaryImage[0].image
+    };
   }
+
+  updateImage(img) {
+    this.setState({ selectedImage: img });
+  }
+
   render() {
     const {
       title,
@@ -28,10 +36,14 @@ class ProductDetails extends Component {
           <h1 className="product__title">{title}</h1>
           <img
             className="product__image"
-            src={Images[0].PrimaryImage[0].image}
+            src={this.state.selectedImage}
             alt={title}
           />
-          <Carousel images={Images} slidesToShow={3} />
+          <Carousel
+            images={Images}
+            slidesToShow={3}
+            updateImage={this.updateImage.bind(this)}
+          />
         </div>
         <div className="product__panel--details">
           <section aria-labelledby="price">

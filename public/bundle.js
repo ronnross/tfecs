@@ -25382,10 +25382,18 @@ var ProductDetails = function (_Component) {
     var _this = _possibleConstructorReturn(this, (ProductDetails.__proto__ || Object.getPrototypeOf(ProductDetails)).call(this, props));
 
     _this.props = props;
+    _this.state = {
+      selectedImage: _this.props.product.Images[0].PrimaryImage[0].image
+    };
     return _this;
   }
 
   _createClass(ProductDetails, [{
+    key: 'updateImage',
+    value: function updateImage(img) {
+      this.setState({ selectedImage: img });
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props$product = this.props.product,
@@ -25414,10 +25422,14 @@ var ProductDetails = function (_Component) {
           ),
           _react2.default.createElement('img', {
             className: 'product__image',
-            src: Images[0].PrimaryImage[0].image,
+            src: this.state.selectedImage,
             alt: title
           }),
-          _react2.default.createElement(_Carousel2.default, { images: Images, slidesToShow: 3 })
+          _react2.default.createElement(_Carousel2.default, {
+            images: Images,
+            slidesToShow: 3,
+            updateImage: this.updateImage.bind(this)
+          })
         ),
         _react2.default.createElement(
           'div',
@@ -25635,6 +25647,9 @@ var Carousel = function (_Component) {
               key: idx,
               className: 'carousel__image',
               src: img.image,
+              onClick: function onClick() {
+                return _this2.props.updateImage(img.image);
+              },
               alt: 'product tile'
             });
           })
