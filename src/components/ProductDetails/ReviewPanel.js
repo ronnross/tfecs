@@ -5,7 +5,6 @@ import Ratings from '../DesignSystem/Ratings';
 const localDate = 'MMM DD, YYYY';
 
 const Reviews = ({ data, reviews }) => {
-  console.log('reviews', reviews);
   const { totalReviews, consolidatedOverallRating, Con, Pro } = reviews[0];
 
   return (

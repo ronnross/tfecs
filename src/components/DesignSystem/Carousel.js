@@ -10,17 +10,18 @@ class Carousel extends Component {
   }
 
   handleShift(direction) {
-    console.log('ok');
     if (direction === 'left') {
-      this.setState({ index: this.state.index - 1 });
-      this.stupid.scrollBy({
-        left: -80,
+      let idx = this.state.index - 1;
+      this.setState({ index: idx });
+      this.carouselFrame.scrollTo({
+        left: idx * 80,
         behavior: 'smooth'
       });
     } else {
-      this.setState({ index: this.state.index + 1 });
-      this.stupid.scrollBy({
-        left: 80,
+      let idx = this.state.index + 1;
+      this.setState({ index: idx });
+      this.carouselFrame.scrollTo({
+        left: idx * 80,
         behavior: 'smooth'
       });
     }
@@ -41,8 +42,8 @@ class Carousel extends Component {
         </button>
         <div
           className="carousel__images"
-          ref={stupid => {
-            this.stupid = stupid;
+          ref={carouselFrame => {
+            this.carouselFrame = carouselFrame;
           }}
         >
           {AlternateImages.map((img, idx) => {

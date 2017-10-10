@@ -22,7 +22,6 @@ class ProductDetails extends Component {
     const showAddToCart = ['0', '1'].includes(purchasingChannelCode);
     const showPickUp = ['0', '2'].includes(purchasingChannelCode);
 
-    console.log(showAddToCart, showPickUp);
     return [
       <main className="container" key={'main'}>
         <div className="product__panel--view">

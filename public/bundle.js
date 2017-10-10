@@ -25401,7 +25401,6 @@ var ProductDetails = function (_Component) {
       var showAddToCart = ['0', '1'].includes(purchasingChannelCode);
       var showPickUp = ['0', '2'].includes(purchasingChannelCode);
 
-      console.log(showAddToCart, showPickUp);
       return [_react2.default.createElement(
         'main',
         { className: 'container', key: 'main' },
@@ -25579,17 +25578,18 @@ var Carousel = function (_Component) {
   _createClass(Carousel, [{
     key: 'handleShift',
     value: function handleShift(direction) {
-      console.log('ok');
       if (direction === 'left') {
-        this.setState({ index: this.state.index - 1 });
-        this.stupid.scrollBy({
-          left: -80,
+        var idx = this.state.index - 1;
+        this.setState({ index: idx });
+        this.carouselFrame.scrollTo({
+          left: idx * 80,
           behavior: 'smooth'
         });
       } else {
-        this.setState({ index: this.state.index + 1 });
-        this.stupid.scrollBy({
-          left: 80,
+        var _idx = this.state.index + 1;
+        this.setState({ index: _idx });
+        this.carouselFrame.scrollTo({
+          left: _idx * 80,
           behavior: 'smooth'
         });
       }
@@ -25626,8 +25626,8 @@ var Carousel = function (_Component) {
           'div',
           {
             className: 'carousel__images',
-            ref: function ref(stupid) {
-              _this2.stupid = stupid;
+            ref: function ref(carouselFrame) {
+              _this2.carouselFrame = carouselFrame;
             }
           },
           AlternateImages.map(function (img, idx) {
@@ -25737,8 +25737,6 @@ var localDate = 'MMM DD, YYYY';
 var Reviews = function Reviews(_ref) {
   var data = _ref.data,
       reviews = _ref.reviews;
-
-  console.log('reviews', reviews);
   var _reviews$ = reviews[0],
       totalReviews = _reviews$.totalReviews,
       consolidatedOverallRating = _reviews$.consolidatedOverallRating,
