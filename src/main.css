@@ -41,6 +41,10 @@ html {
   padding-left: 2rem;
 }
 
+.product__panel--details {
+  margin-top: 1rem;
+}
+
 .product__title {
   text-align: center;
   font-size: var(--f5);
@@ -335,6 +339,7 @@ td {
   .product__panel--details {
     float: right;
     width: 49%;
+    margin-top: 0;
   }
 
   .reviews {
